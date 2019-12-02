@@ -62,7 +62,7 @@ public interface AppointmentsService {
     void undoStatusChange(Appointment appointment);
 
     @Transactional
-    @Authorized({"Manage Appointments"})
+    @Authorized({MANAGE_APPOINTMENTS, MANAGE_OWN_APPOINTMENTS})
     void updateAppointmentProviderResponse(AppointmentProvider appointmentProviderProvider);
 
     @Transactional
